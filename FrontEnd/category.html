@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <title>WearHouse - Category</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="brand"><a href="dashboard.html">WearHouse</a></div>
+            <button class="menu-button">&#9776;</button>
+            <ul class="navb1">
+                <li><a href="category.html">Category</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+            <ul class="navb2">
+                <!-- Show different content based on isLoggedIn variable -->
+                <li id="loginBtn"><a href="login.html">Login</a></li>
+                <li id="registerBtn"><a href="register.html">Register</a></li>
+                <li id="dropdown" style="display: none;">
+                    <a href="#" id="userName">UserName ↓</a>
+                    <div class="dropdown-content">
+                        <a href="#" id="logoutBtn">Log Out</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <div class="category">
+            <div class="webtitle">Product Category</div>
+            <div class="webcontent">
+                <div class="cont">
+                    <input type="button" value="Add Category" class="badd" onclick="showPopup('addPopup')">
+                    <div class="categ">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="no">No.</th>
+                                    <th class="ca">Category</th>
+                                    <th class="ac">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="categorylist">
+                                <!-- <tr>
+                                    <td class="no">1.</td>
+                                    <td class="ca">Clothes</td>
+                                    <input name="id[0]" value="" style="display: none;">
+                                    <td class="ac"><input type="button" value="Edit" class="bedi" onclick="showPopup('editPopup')"><input type="button" value="Delete" class="bdel" onclick="showPopup('deletePopup')"></td>
+                                </tr> -->
+                                <!-- <tr>
+                                    <td class="no">2.</td>
+                                    <td class="ca">Shoes</td>
+                                    <td class="ac"><input type="button" value="Edit" class="bedi" onclick="showPopup('editPopup')"><input type="button" value="Delete" class="bdel" onclick="showPopup('deletePopup')"></td>
+                                </tr>
+                                <tr>
+                                    <td class="no">3.</td>
+                                    <td class="ca">Jeans</td>
+                                    <td class="ac"><input type="button" value="Edit" class="bedi" onclick="showPopup('editPopup')"><input type="button" value="Delete" class="bdel" onclick="showPopup('deletePopup')"></td></td>
+                                </tr>
+                                <tr>
+                                    <td class="no">4.</td>
+                                    <td class="ca">Glasses</td>
+                                    <td class="ac"><input type="button" value="Edit" class="bedi" onclick="showPopup('editPopup')"><input type="button" value="Delete" class="bdel" onclick="showPopup('deletePopup')"></td></td>
+                                </tr>
+                                <tr>
+                                    <td class="no">5.</td>
+                                    <td class="ca">Hats</td>
+                                    <td class="ac"><input type="button" value="Edit" class="bedi" onclick="showPopup('editPopup')"><input type="button" value="Delete" class="bdel" onclick="showPopup('deletePopup')"></td></td>
+                                </tr> -->
+                            </tbody>
+                        </table>
+                        <div class="popup" id="addPopup">
+                            <span class="close" onclick="closePopup('addPopup')">&times;</span>
+                            <p class="pt">Add Category</p>
+                            <input type="text" id="categoryInput" placeholder="Category">
+                            <button class="badd" onclick="addCategory()" >Submit</button>
+                        </div>
+
+                        <div class="popup" id="editPopup">
+                            <span class="close" onclick="closePopup('editPopup')">&times;</span>
+                            <p class="pt">Edit Category</p>
+                            <input type="text" id="categoryEditInput" placeholder="Category">
+                            <button  class="bedi" onclick="editCategory()">Submit</button>
+                        </div>
+
+                        <div class="popup" id="deletePopup">
+                            <span class="close" onclick="closePopup('deletePopup')">&times;</span>
+                            <p class="pt">Delete Category</p>
+                            <p>This action is irriversible! Are you sure you want to delete this category?</p>
+                            <button class="bdel" onclick="deleteCategory()">Yes</button>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <ul>
+            <li><a href="https://twitter.com/" target="_blank"><img src="assets/Twitter1.png" alt="twitter"></a></li>
+            <li><a href="https://www.facebook.com/" target="_blank"><img src="assets/facebook1.png" alt="facebook"></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank"><img src="assets/instagram1.png" alt="instagram"></a></li>
+        </ul>
+        <p>Copyright @ 2021 Timothy Ryan Japri. All Rights Reserved</p>
+    </footer>
+</body>
+<script src="Javascript/nav.js"></script>
+<script src="Javascript/category.js"></script>
+</html>

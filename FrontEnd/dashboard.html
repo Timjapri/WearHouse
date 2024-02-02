@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <title>WearHouse - Dashboard</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="brand"><a href="dashboard.html">WearHouse</a></div>
+            <button class="menu-button">&#9776;</button>
+            <ul class="navb1">
+                <li><a href="category.html">Category</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+            <ul class="navb2">
+                <!-- Show different content based on isLoggedIn variable -->
+                <li id="loginBtn"><a href="login.html">Login</a></li>
+                <li id="registerBtn"><a href="register.html">Register</a></li>
+                <li id="dropdown" style="display: none;">
+                    <a href="#" id="userName">UserName ↓</a>
+                    <div class="dropdown-content">
+                        <a href="#" id="logoutBtn">Log Out</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+
+    <div class="content">
+        <div class="dashboard">
+            <div class="webtitle">Dashboard</div>
+            <div class="webcontent">You are logged in!</div>
+        </div>
+    </div>
+
+    <footer>
+        <ul>
+            <li><a href="https://twitter.com/" target="_blank"><img src="assets/Twitter1.png" alt="twitter"></a></li>
+            <li><a href="https://www.facebook.com/" target="_blank"><img src="assets/facebook1.png" alt="facebook"></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank"><img src="assets/instagram1.png" alt="instagram"></a></li>
+        </ul>
+        <p>Copyright @ 2021 Timothy Ryan Japri. All Rights Reserved</p>
+    </footer>
+</body>
+<script src="Javascript/nav.js"></script>
+</html>
